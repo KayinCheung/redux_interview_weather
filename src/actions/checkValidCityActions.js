@@ -17,8 +17,6 @@ export const checkValidCity = (city) => dispatch =>{
         dispatch(fetchAPI(cityid))
       } else if (city in duplicate_cities){
         //Duplicate cities, Show all recommendations
-        console.log("duplicate")
-        console.log(duplicate_cities[city])
         dispatch({
             type: DUPLICATE_CITY,
             recommendations: duplicate_cities[city],

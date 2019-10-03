@@ -1,0 +1,9 @@
+export const FETCH_API = 'FETCH_API'
+export const CHECK_VALID_CITY = 'CHECK_VALID_CITY'
+
+export const DUPLICATE_CITY = 'DUPLICATE_CITY'
+export const VALID_CITY = 'VALID_CITY'
+export const CITY_NOT_FOUND = 'CITY_NOT_FOUND'
+
+export const DATE_SELECTION = 'DATE_SELECTION'
+export const ON_API_LOAD = 'ON_API_LOAD'

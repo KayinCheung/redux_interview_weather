@@ -3,7 +3,7 @@
 - Requirements: Recent version of Node - https://nodejs.org/en/download/
 - Download and unzip the repository.
 - `npm install`, then `npm start` to run it locally in your browser. 
-Or visit https://interviewtest2.github.io/ to view the project deployed on github pages.
+Or visit https://interviewtestredux.github.io/ to view the project deployed on github pages.
 - `npm run build` to build the project for deployment
 
 ## Testing

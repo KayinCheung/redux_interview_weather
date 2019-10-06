@@ -1,3 +1,4 @@
+export const START_FETCH_API = 'START_FETCH_API'
 export const FETCH_API = 'FETCH_API'
 export const CHECK_VALID_CITY = 'CHECK_VALID_CITY'
 

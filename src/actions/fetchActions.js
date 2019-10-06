@@ -1,9 +1,15 @@
-import { FETCH_API } from './types'
+import { START_FETCH_API, FETCH_API } from './types'
 import constant from '../Constant'
 import * as util from '../util.js'
 import { handleDateSelection } from './dateSelectionAction';
 
 export const fetchAPI = (cityid = constant.defaultCityId) => dispatch =>{
+
+    dispatch({
+        type: START_FETCH_API,
+        loading: true
+    })
+
     fetch(`https://api.openweathermap.org/data/2.5/forecast?id=${cityid}&appid=${constant.APIKey}&units=${constant.unit}`)
     .then(response => response.json())
     .then(data => {
@@ -106,6 +112,7 @@ export const fetchAPI = (cityid = constant.defaultCityId) => dispatch =>{
 
         dispatch({
             type: FETCH_API,
+            loading: false,
             payload: data,
             threeHrData: threeHrData,
             dailyData: dailyData,
@@ -117,5 +124,7 @@ export const fetchAPI = (cityid = constant.defaultCityId) => dispatch =>{
         //Auto select the first available date on API load
         dispatch(handleDateSelection(earliest_date))
     
-    }) 
+    }).catch( err => {
+        console.log(err)
+      }) 
 }
